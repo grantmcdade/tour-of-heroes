@@ -6,28 +6,20 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent } from './heroes.component';
+import { DashboardComponent } from './dashboard.component';
 import { HeroService } from './hero.service';
 
-RouterModule.forRoot([
-  {
-    path: 'heroes',
-    component: HeroesComponent
-  }
-])
+import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([
-      {
-        path: 'heroes',
-        component: HeroesComponent
-      }
-    ]
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,
+    DashboardComponent,
     HeroDetailComponent,
     HeroesComponent
   ],
